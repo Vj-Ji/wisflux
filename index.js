@@ -59,9 +59,10 @@ members.map((member) => {
 // console.log(groups);
 
 // 7. add a new member to same members array instance at index 2
-
-// const updatedMembers = members.splice(2, 0, { name: "Ashu", age: 20 });
 const updatedMembers = [...members];
 updatedMembers.splice(2, 0, { name: "Ashu", age: 20 });
+// console.log(updatedMembers);
 
-console.log(updatedMembers);
+// 8. extract first and second element using destructing
+const [first, second] = members;
+console.log(first, second);
