@@ -16,3 +16,15 @@ const fname = [];
 members.map((member) => fname.push(_.split(member.name, " ")[0]));
 
 // console.log(fname);
+
+// 2. Make everyone's last names in UPPERCASE in given array of objects
+_.map(
+  members,
+  (member) =>
+    (member.name =
+      _.split(member.name, " ")[0] +
+      " " +
+      _.split(member.name, " ")[1].toUpperCase())
+);
+
+console.log(members);
