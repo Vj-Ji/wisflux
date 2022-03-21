@@ -26,16 +26,14 @@ const newA = members.filter((member) => 41 <= member.age && member.age <= 60);
 
 // 4. Get average age
 
-const avg = members.reduce(getAvg, 0) / members.length;
-function getAvg(total, member) {
-  if (member.age) {
-    return total + member.age;
-  } else {
-    return total;
-  }
-}
+const membersWithAge = members.filter((member) => member.age != undefined);
 
-// console.log(avg.toFixed(2));
+const avg =
+  membersWithAge.reduce((total, member) => {
+    return total + member.age;
+  }, 0) / membersWithAge.length;
+
+console.log(avg.toFixed(2));
 
 // 5. Get Person with maximum age
 let age = 0;
@@ -44,4 +42,11 @@ members.map((member) => {
     age = member.age;
   }
 });
-console.log(age);
+// console.log(age);
+
+// 6. Divide persons in three groups
+const groups = {
+  young: [],
+  old: [],
+  noage: [],
+};
