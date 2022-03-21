@@ -88,4 +88,8 @@ const [first, second] = members;
 //    and keeping existing afterwards
 
 const elementAdded = [{ name: "Ashu", age: 20 }, ...members];
-console.log(elementAdded);
+// console.log(elementAdded);
+
+// 10. Extract properties of object using destructuring
+const { name, age } = members[0];
+console.log(name, age);
