@@ -35,4 +35,13 @@ function getAvg(total, member) {
   }
 }
 
-console.log(avg.toFixed(2));
+// console.log(avg.toFixed(2));
+
+// 5. Get Person with maximum age
+let age = 0;
+members.map((member) => {
+  if (age < member.age) {
+    age = member.age;
+  }
+});
+console.log(age);
