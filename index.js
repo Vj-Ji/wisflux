@@ -78,4 +78,8 @@ _.map(members, (member) => {
 const updatedMembers = [...members];
 updatedMembers.splice(2, 0, { name: "Ashu", age: 20 });
 
-console.log(updatedMembers);
+// console.log(updatedMembers);
+
+// 8. extract first and second element using destructing
+const [first, second] = members;
+console.log(first, second);
