@@ -9,24 +9,26 @@ const members = [
   { name: "Yogesh Khatri", age: 51 },
 ];
 
+// 1. Get array of first names of everyone
 const fname = [];
 members.map((member) => fname.push(member.name.split(" ")[0]));
 // console.log(fname);
 
+// 2. Make everyone's last names in UPPERCASE in given array of objects
 members.map(
   (member) =>
     (member.name =
       member.name.split(" ")[0] + " " + member.name.split(" ")[1].toUpperCase())
 );
-
 // console.log(members);
 
+// 3. Get entries where age is between 41-60
 const newA = members.filter((member) => 41 <= member.age && member.age <= 60);
 // console.log(newA);
 
 // 4. Get average age
 
-const membersWithAge = members.filter((member) => member.age != undefined);
+const membersWithAge = members.filter((member) => !!member.age);
 
 const avg =
   membersWithAge.reduce((total, member) => {
@@ -89,4 +91,24 @@ const { name: fullname, ...rest } = members[0];
 // 13. Create a new object by copying using spread operator, override
 //     one of the properties to assign a new value in the same step
 const copiedMember = { ...members[0], name: "Virus" };
-console.log(copiedMember);
+// console.log(copiedMember);
+
+// 14. Use reduce function on array and object
+const arr = [1, 2, 3, 4, 5];
+const obj = {
+  a: 1,
+  b: 2,
+  c: 3,
+  d: 4,
+  e: 5,
+};
+
+const add = arr.reduce((total, element) => {
+  return total + element;
+}, 0);
+const oadd = Object.values(obj).reduce((total, element) => {
+  return total + element;
+}, 0);
+
+console.log(add);
+console.log(oadd);
