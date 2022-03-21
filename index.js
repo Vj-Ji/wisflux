@@ -33,7 +33,7 @@ const avg =
     return total + member.age;
   }, 0) / membersWithAge.length;
 
-console.log(avg.toFixed(2));
+// console.log(avg.toFixed(2));
 
 // 5. Get Person with maximum age
 let age = 0;
@@ -50,3 +50,10 @@ const groups = {
   old: [],
   noage: [],
 };
+
+members.map((member) => {
+  if (member.age <= 35) groups.young.push(member);
+  else if (member.age >= 35) groups.old.push(member);
+  else groups.noage.push(member);
+});
+console.log(groups);
