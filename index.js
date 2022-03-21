@@ -74,6 +74,9 @@ const elementAdded = [{ name: "Ashu", age: 20 }, ...members];
 // console.log(elementAdded);
 
 // 10. Extract properties of object using destructuring
-const { name, age } = members[0];
-console.log(name, age);
-// console.log(members[0]);
+// const { name, age } = members[0];
+// console.log(name, age);
+
+// 11. Rename extracted property of object while destructing
+const { name: fullname, age: mAge } = members[0];
+console.log(fullname, mAge);
