@@ -65,4 +65,10 @@ updatedMembers.splice(2, 0, { name: "Ashu", age: 20 });
 
 // 8. extract first and second element using destructing
 const [first, second] = members;
-console.log(first, second);
+// console.log(first, second);
+
+// 9. Create a new array instance adding a new member at index 0,
+//    and keeping existing afterwards
+
+const elementAdded = [{ name: "Ashu", age: 20 }, ...members];
+console.log(elementAdded);
