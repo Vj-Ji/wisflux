@@ -48,4 +48,13 @@ const avg =
     0
   ) / membersWithAge.length;
 
-console.log(avg.toFixed(2));
+// console.log(avg.toFixed(2));
+
+// 5. Get Person with maximum age
+let maxAge = 0;
+_.map(members, (member) => {
+  if (maxAge < member.age) {
+    maxAge = member.age;
+  }
+});
+console.log(maxAge);
