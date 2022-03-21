@@ -19,4 +19,7 @@ members.map(
       member.name.split(" ")[0] + " " + member.name.split(" ")[1].toUpperCase())
 );
 
-console.log(members);
+// console.log(members);
+
+const newA = members.filter((member) => 41 <= member.age && member.age <= 60);
+console.log(newA);
