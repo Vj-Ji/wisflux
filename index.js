@@ -74,9 +74,14 @@ const elementAdded = [{ name: "Ashu", age: 20 }, ...members];
 // console.log(elementAdded);
 
 // 10. Extract properties of object using destructuring
-// const { name, age } = members[0];
+const { name, age } = members[0];
 // console.log(name, age);
 
 // 11. Rename extracted property of object while destructing
-const { name: fullname, age: mAge } = members[0];
-console.log(fullname, mAge);
+// const { name: fullname, age: mAge } = members[0];
+// console.log(fullname, mAge);
+
+// 12. Destructure any property of an object and use spread operator
+//     to get remaining properties in an object
+const { name: fullname, ...rest } = members[0];
+console.log(fullname, rest);
