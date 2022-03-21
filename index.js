@@ -34,4 +34,18 @@ const newA = _.filter(
   members,
   (member) => 41 <= member.age && member.age <= 60
 );
-console.log(newA);
+// console.log(newA);
+
+// 4. Get average age
+
+const membersWithAge = _.filter(members, (member) => member.age);
+const avg =
+  _.reduce(
+    membersWithAge,
+    (total, member) => {
+      return total + member.age;
+    },
+    0
+  ) / membersWithAge.length;
+
+console.log(avg.toFixed(2));
