@@ -101,4 +101,9 @@ const { name, age } = members[0];
 // 12. Destructure any property of an object and use spread operator
 //     to get remaining properties in an object
 const { name: fullname, ...rest } = members[0];
-console.log(fullname, rest);
+// console.log(fullname, rest);
+
+// 13. Create a new object by copying using spread operator, override
+//     one of the properties to assign a new value in the same step
+const copiedMember = { ...members[0], name: "Virus" };
+console.log(copiedMember);
