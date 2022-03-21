@@ -10,5 +10,5 @@ const members = [
 ];
 
 const fname = [];
-members.map((member) => fname.push(member.name));
+members.map((member) => fname.push(member.name.split(" ")[0]));
 console.log(fname);
