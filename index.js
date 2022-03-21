@@ -56,4 +56,12 @@ members.map((member) => {
   else if (member.age >= 35) groups.old.push(member);
   else groups.noage.push(member);
 });
-console.log(groups);
+// console.log(groups);
+
+// 7. add a new member to same members array instance at index 2
+
+// const updatedMembers = members.splice(2, 0, { name: "Ashu", age: 20 });
+const updatedMembers = [...members];
+updatedMembers.splice(2, 0, { name: "Ashu", age: 20 });
+
+console.log(updatedMembers);
