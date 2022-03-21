@@ -22,4 +22,17 @@ members.map(
 // console.log(members);
 
 const newA = members.filter((member) => 41 <= member.age && member.age <= 60);
-console.log(newA);
+// console.log(newA);
+
+// 4. Get average age
+
+const avg = members.reduce(getAvg, 0) / members.length;
+function getAvg(total, member) {
+  if (member.age) {
+    return total + member.age;
+  } else {
+    return total;
+  }
+}
+
+console.log(avg.toFixed(2));
