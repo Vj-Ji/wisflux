@@ -27,4 +27,11 @@ _.map(
       _.split(member.name, " ")[1].toUpperCase())
 );
 
-console.log(members);
+// console.log(members);
+
+// 3. Get entries where age is between 41-60
+const newA = _.filter(
+  members,
+  (member) => 41 <= member.age && member.age <= 60
+);
+console.log(newA);
