@@ -36,10 +36,10 @@ const avg =
 // console.log(avg.toFixed(2));
 
 // 5. Get Person with maximum age
-let age = 0;
+let maxAge = 0;
 members.map((member) => {
-  if (age < member.age) {
-    age = member.age;
+  if (maxAge < member.age) {
+    maxAge = member.age;
   }
 });
 // console.log(age);
@@ -71,4 +71,9 @@ const [first, second] = members;
 //    and keeping existing afterwards
 
 const elementAdded = [{ name: "Ashu", age: 20 }, ...members];
-console.log(elementAdded);
+// console.log(elementAdded);
+
+// 10. Extract properties of object using destructuring
+const { name, age } = members[0];
+console.log(name, age);
+// console.log(members[0]);
