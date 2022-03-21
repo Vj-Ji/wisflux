@@ -57,4 +57,19 @@ _.map(members, (member) => {
     maxAge = member.age;
   }
 });
-console.log(maxAge);
+// console.log(maxAge);
+
+// 6. Divide persons in three groups
+const groups = {
+  young: [],
+  old: [],
+  noage: [],
+};
+
+_.map(members, (member) => {
+  if (member.age <= 35) groups.young.push(member);
+  else if (member.age >= 35) groups.old.push(member);
+  else groups.noage.push(member);
+});
+
+console.log(groups);
